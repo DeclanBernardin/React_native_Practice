@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import 'react-native-gesture-handler';
+import React, {Component} from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
-import PlaceDetails from '../screens/PlaceDetailScreen'
 
-class PlacesListScreen extends Component {
-    render() {
-        return (
-            <View>
-                <Text>PlacesListScreen</Text>
-                <Button title='test' component={PlaceDetails} />
-            </View>
-        );
-    };
-};
+
+
+
+    function PlacesListScreen ({ navigation })  {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Home Screen</Text>
+            <Button
+                title="Go to Details"
+                onPress={() => navigation.navigate('Details')}
+            />
+        </View>
+    );
+}
+
 
 const styles = StyleSheet.create({
 

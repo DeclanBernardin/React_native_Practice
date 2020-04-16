@@ -9,7 +9,6 @@ import PlacesList from '../screens/PlacesListScreen';
 import PlacesDetails from '../screens/PlaceDetailScreen'; 
 import NewPlace from '../screens/NewPlaceScreen'; 
 import MapScreen from '../screens/MapScreen';
-import PlacesListScreen from '../screens/PlacesListScreen';
 
 class PlacesNavigation extends Component {
 
@@ -22,8 +21,10 @@ class PlacesNavigation extends Component {
         return(
                 <NavigationContainer>
                     <Stack.Navigator>
-                        <Stack.Screen name="PlacesList" component={PlacesList} options={{title: 'Test'}} />
-                        <Stack.Screen name="Details" component={PlacesDetails} />
+                        <Stack.Screen name="Places List" component={PlacesList} options={{title: 'Place List'}} />
+                        <Stack.Screen name="Details" component={PlacesDetails} options={{title: 'Details'}} />
+                        <Stack.Screen name="New Place" component={NewPlace} options={{title: 'New Place'}} />
+                        <Stack.Screen name="Map Screen" component={MapScreen} options={{title: 'Map'}} />
                     </Stack.Navigator>
                 </NavigationContainer>
         )
